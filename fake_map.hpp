@@ -100,6 +100,10 @@ public:
     iterator erase(const_iterator erased) {
         return _data.erase(erased);
     }
+	
+    iterator erase(const_iterator first, const_iterator last) {
+        return _data.erase(first, last);
+    }
 
     const_iterator find(const key_type& key) const {
         for (auto it = _data.begin(); it != _data.end(); ++it) {
