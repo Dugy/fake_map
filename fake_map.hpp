@@ -89,12 +89,12 @@ public:
     }
 
     void emplace() {
-        return _data.push_back();
+        _data.push_back();
     }	
 
     template <typename Arg, typename... Args >
     void emplace(Arg arg, Args&&... args ) {
-        return _data.emplace_back(arg, args...);
+        _data.emplace_back(arg, args...);
     }
 
     iterator erase(const_iterator erased) {
